@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <main>
+        <ul>
+            <h1>Lista de tarefas</h1>
+            <button id="add" title="Adicionar nova tarefa" type="button" class="add">+</button>
+            <form action="/add" method="post">
+                <input type="task" id="newTask" name="task" placeholder="Digite sua tarefa">
+            </form>
+            {{#tasks}}
+            <li id="{{id}}" {{#done}}class="done"{{/done}}>{{task}} <div class="options"> {{^done}}<a href="/done/{{id}}" class="success">✔</a>{{/done}}<a href="/del/{{id}}" class="del">x</a></div></li>
+            {{/tasks}}
+            {{^tasks}}
+            <h3>Você não tem tarefas clique no "+" para adicionar!</h3>
+            {{/tasks}}
+            
+        </ul>
+    </main>
+    <footer>
+
+    </footer>
+<script src="./assets/js/script.js" ></script>
+</body>
+</html>

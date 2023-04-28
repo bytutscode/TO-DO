@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #2E282A;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    padding: 20px;
+    background-color: #EF7B45;
+    width: 80vw;
+    margin: auto;
+    border-radius: 30px;
+    -moz-transform: skew(-5deg, 0deg);
+    -webkit-transform: skew(-5deg, 0deg);
+    -o-transform: skew(-5deg, 0deg);
+    -ms-transform: skew(-5deg, 0deg);
+    transform: skew(-5deg, 0deg);
+    height: 90vh;
+    transition: ease-in 0.5s;
+    overflow-x: auto;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  ul {
+    scrollbar-width: auto;
+    scrollbar-color: #f78154 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  ul::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  ul::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 5px;
+  }
+
+  ul::-webkit-scrollbar-thumb {
+    background-color: #f78154;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+h1 {
+    text-align: center;
+}
+.add {
+    font-size: 60px;
+    cursor: pointer;
+    outline: 0;
+    color: #5FAD56;
+    border: 0;
+    background-color: #00000000;
+}
+
+input {
+    width: 100%;
+}
+
+li,input {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 28px;
+    padding: 10px;
+    background-color: #EDB88B;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid black;
+    outline: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    display: none;
+}
+
+.options {
+    display: flex;
+}
+
+.options * {
+    padding: 0px 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.done {
+    background-color: #5FAD56;
+}
+
+
+@media (max-width:800px){
+    li, input {
+        font-size: 17px;
+    }
+    .options * {
+        font-size: 20px;
+    }
+}
